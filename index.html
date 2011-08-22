@@ -71,15 +71,6 @@
 		h1, h2, h3, h4, h5, h6 {
 			padding-top: 20px;
 		}
-		h1.title {
-			font-size: 64px;
-			margin-bottom: 0;
-			line-height: 72px;
-		}
-		div.description {
-			font-size: 18px;
-			color: #666;
-		}
 		h2 {
 			font-size: 20px;
 		}
@@ -122,11 +113,9 @@
 			margin: 0px 0 30px;
 		}
 	</style>
-	<title>Doccito</title>
+	<title>README</title>
 </head>
 <body>
-	<a href="http://github.com/Rootbuzz/doccito"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-	
 	<div id="sidebar" class="interface">
 		<a href="#Installation" class="h2">Installation</a>
 <a href="#Usage" class="h2">Usage</a>
@@ -135,9 +124,6 @@
 <a href="#doccito-create_docs" class="h3">doccito.create_docs</a>
 	</div>
 	<div class="container">
-		<h1 class='title'>Doccito</h1>
-		<div class='description'>Dead Simple Documentation</div>
-		
 		<h2 id="Installation">Installation</h2>
 <p>Install lib with pip:</p>
 <pre><code>pip install doccito
@@ -154,12 +140,11 @@
 --stdio        specifies stdio
 --template     specifies custom html template
 --version      show program's version number and exit
-</code></pre>
-<p>The <code>--stdio</code> is required for the page to not turn to shit.</p>
-<pre><code>cat README.markdown | python doccito.py --stdio &gt; docs.html
+
+cat README.markdown | python doccito.py --stdio &gt; docs.html
 </code></pre>
 <p><strong>- OR -</strong></p>
-<pre><code>python doccito.py --stdio README.markdown &gt; docs.html
+<pre><code>python doccito.py README.markdown &gt; docs.html
 </code></pre>
 <p>will take the README.markdown file and throw it into the default base.html template and create and send it to docs.html.</p>
 <pre><code>cat README.markdown | python doccito.py --stdio --template layout.html &gt; docs.html
